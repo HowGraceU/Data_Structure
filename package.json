@@ -1,0 +1,28 @@
+{
+  "name": "Data_Structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"util": "node mochaRunner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HowGraceU/Data_Structure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HowGraceU/Data_Structure/issues"
+  },
+  "homepage": "https://github.com/HowGraceU/Data_Structure#readme",
+  "devDependencies": {
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.2.0",
+    "karma-jasmine": "^2.0.1",
+    "mocha": "^6.1.4",
+    "mochawesome": "^4.0.1"
+  }
+}
