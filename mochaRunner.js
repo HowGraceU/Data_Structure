@@ -12,6 +12,9 @@ let mocha = new Mocha({
 mocha.addFile(join('tests', 'util', 'list.spec.js'));
 mocha.addFile(join('tests', 'util', 'stack.spec.js'));
 mocha.addFile(join('tests', 'util', 'queue.spec.js'));
+mocha.addFile(join('tests', 'util', 'listNode.spec.js'));
+mocha.addFile(join('tests', 'util', 'doubleListNode.spec.js'));
+mocha.addFile(join('tests', 'util', 'set.spec.js'));
 mocha.run(() => {
     process.exit();
 })
