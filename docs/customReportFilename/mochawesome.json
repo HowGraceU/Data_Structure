@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 6,
-    "tests": 11,
-    "passes": 11,
+    "suites": 8,
+    "tests": 14,
+    "passes": 14,
     "pending": 0,
     "failures": 0,
-    "start": "2019-07-18T14:42:32.376Z",
-    "end": "2019-07-18T14:42:32.395Z",
-    "duration": 19,
-    "testsRegistered": 11,
+    "start": "2019-07-21T08:26:41.725Z",
+    "end": "2019-07-21T08:26:41.747Z",
+    "duration": 22,
+    "testsRegistered": 14,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f7707466-164e-4c33-8be1-ce948bdb214b",
+      "uuid": "c3a7c178-c3b5-4bfb-a68d-b0338ca505fe",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+          "uuid": "123a75a2-c553-467e-8c1f-a65ba1c35684",
           "title": "列表基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\list.spec.js",
           "file": "\\tests\\util\\list.spec.js",
@@ -45,10 +45,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nassert.equal(list.getElement(), 1);\nlist.next()\nassert.equal(list.getElement(), 2);\nlist.next()\nassert.equal(list.getElement(), 3);\nassert.equal(list.find(2), 1);\nassert.equal(list.size, 3);\nassert.equal(list.toString(), '1,2,3');\ndone();",
+              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nassert.equal(list.currPos, 0);\nassert.equal(list.getElement(), 1);\nlist.next()\nassert.equal(list.currPos, 1);\nassert.equal(list.getElement(), 2);\nlist.next()\nassert.equal(list.currPos, 2);\nassert.equal(list.getElement(), 3);\nassert.equal(list.find(2), 1);\nassert.equal(list.length, 3);\nassert.equal(list.toString(), '1,2,3');\ndone();",
               "err": {},
-              "uuid": "e5add249-1d83-4c95-bb6e-4e8e4d9fee61",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "fd965898-7ffc-4f90-b408-b899c16484d0",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             },
@@ -63,10 +63,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.remove(2)\nassert.equal(list.getElement(), 1);\nlist.next()\nassert.equal(list.getElement(), 3);\nassert.equal(list.find(2), -1);\nassert.equal(list.size, 2);\nassert.equal(list.toString(), '1,3');\nassert.equal(list.remove(4), false);\nassert.equal(list.toString(), '1,3');\ndone();",
+              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.remove(2)\nassert.equal(list.getElement(), 1);\nlist.next()\nassert.equal(list.getElement(), 3);\nassert.equal(list.find(2), -1);\nassert.equal(list.length, 2);\nassert.equal(list.toString(), '1,3');\nassert.equal(list.remove(4), false);\nassert.equal(list.toString(), '1,3');\ndone();",
               "err": {},
-              "uuid": "0e3b800b-9f4e-4dfb-8a20-0e21b9a0904e",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "5ef89240-80ae-44b6-b74f-7b24ef23bddc",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             },
@@ -81,10 +81,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.clear();\nassert.equal(list.size, 0);\nassert.equal(list.toString(), '');\ndone();",
+              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.clear();\nassert.equal(list.length, 0);\nassert.equal(list.toString(), '');\ndone();",
               "err": {},
-              "uuid": "6d0aa917-8021-4a15-a959-ba079eb2c338",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "f0c3145a-de29-479b-a111-25abe207244f",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             },
@@ -99,10 +99,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.insert(2, 4);\nassert.equal(list.size, 4);\nassert.equal(list.toString(), '1,2,4,3');\ndone();",
+              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.insert(2, 4);\nlist.insert(4, 5);\nlist.insert(6, 7);\nassert.equal(list.length, 5);\nassert.equal(list.toString(), '1,2,4,5,3');\ndone();",
               "err": {},
-              "uuid": "0c0ddb4c-14c6-43bf-9801-7f270d61e0d9",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "57e6e1cf-8602-438b-9501-36dade520106",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.append(4);\nlist.next();\nassert.equal(list.getElement(), 2);\nlist.next();\nassert.equal(list.getElement(), 3);\nlist.front();\nassert.equal(list.getElement(), 1);\nlist.end();\nassert.equal(list.getElement(), 4);\nlist.prev();\nassert.equal(list.getElement(), 3);\ndone();",
               "err": {},
-              "uuid": "a4d96b68-734a-4626-91a6-eb912f6c96c3",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "7466cb68-2a22-40bf-9278-46f9c916dc32",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             },
@@ -137,20 +137,39 @@
               "context": null,
               "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.append(4);\nlist.next();\nassert.equal(list.getElement(), 2);\nlist.moveTo(4);\nassert.equal(list.getElement(), 4);\nlist.moveTo(1);\nassert.equal(list.getElement(), 2);\ndone();",
               "err": {},
-              "uuid": "00cfbad4-1a04-44db-acc4-8f8eb6b0a17b",
-              "parentUUID": "f30b40c1-2c1d-4351-bff6-5ef3e44c60bf",
+              "uuid": "19054c5c-0ada-41b5-bba5-c87715c69127",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "contains 函数测试",
+              "fullTitle": "列表基本功能测试 contains 函数测试",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const list = new List();\nlist.append(1);\nlist.append(2);\nlist.append(3);\nlist.append(4);\nassert.equal(list.contains(2), true);\nassert.equal(list.contains(4), true);\nassert.equal(list.contains(6), false);\ndone();",
+              "err": {},
+              "uuid": "b50b0eff-6c05-46a8-b9c1-abb659cc6b11",
+              "parentUUID": "123a75a2-c553-467e-8c1f-a65ba1c35684",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e5add249-1d83-4c95-bb6e-4e8e4d9fee61",
-            "0e3b800b-9f4e-4dfb-8a20-0e21b9a0904e",
-            "6d0aa917-8021-4a15-a959-ba079eb2c338",
-            "0c0ddb4c-14c6-43bf-9801-7f270d61e0d9",
-            "a4d96b68-734a-4626-91a6-eb912f6c96c3",
-            "00cfbad4-1a04-44db-acc4-8f8eb6b0a17b"
+            "fd965898-7ffc-4f90-b408-b899c16484d0",
+            "5ef89240-80ae-44b6-b74f-7b24ef23bddc",
+            "f0c3145a-de29-479b-a111-25abe207244f",
+            "57e6e1cf-8602-438b-9501-36dade520106",
+            "7466cb68-2a22-40bf-9278-46f9c916dc32",
+            "19054c5c-0ada-41b5-bba5-c87715c69127",
+            "b50b0eff-6c05-46a8-b9c1-abb659cc6b11"
           ],
           "failures": [],
           "pending": [],
@@ -161,7 +180,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "7d1315fd-ff1b-42f0-841a-53fb9cea313a",
+          "uuid": "f5968272-d91e-41f7-8ae2-ecef932c5223",
           "title": "栈基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\stack.spec.js",
           "file": "\\tests\\util\\stack.spec.js",
@@ -181,15 +200,15 @@
               "context": null,
               "code": "const stack = new Stack();\nstack.push(1);\nassert.equal(stack.top, 1);\nstack.push(2);\nassert.equal(stack.top, 2);\nstack.push(3);\nassert.equal(stack.top, 3);\nstack.push(4);\nassert.equal(stack.top, 4);\nassert.equal(stack.peek(), 4);\nstack.pop();\nassert.equal(stack.top, 3);\nassert.equal(stack.peek(), 3);\nstack.pop();\nassert.equal(stack.top, 2);\nassert.equal(stack.peek(), 2);\nstack.clear();\nstack.push(3);\nassert.equal(stack.top, 1);\nassert.equal(stack.peek(), 3);\ndone();",
               "err": {},
-              "uuid": "21ffdbb0-970a-4ded-b1d1-0a3fe4666bfd",
-              "parentUUID": "7d1315fd-ff1b-42f0-841a-53fb9cea313a",
+              "uuid": "cf271d17-6d2c-4bee-a793-88722f6a06da",
+              "parentUUID": "f5968272-d91e-41f7-8ae2-ecef932c5223",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "21ffdbb0-970a-4ded-b1d1-0a3fe4666bfd"
+            "cf271d17-6d2c-4bee-a793-88722f6a06da"
           ],
           "failures": [],
           "pending": [],
@@ -200,7 +219,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "02c18048-45b3-4f1a-a9f0-aba18acc4957",
+          "uuid": "57b635dc-10ae-48e6-a925-071ec1dd11e5",
           "title": "队列基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\queue.spec.js",
           "file": "\\tests\\util\\queue.spec.js",
@@ -220,15 +239,15 @@
               "context": null,
               "code": "const queue = new Queue();\nassert.equal(queue.empty(), true);\nqueue.enqueue(1);\nqueue.enqueue(2);\nqueue.enqueue(3);\nassert.equal(queue.toString(), \n`1\n2\n3`);\nqueue.dequeue();\nassert.equal(queue.toString(), \n`2\n3`);\nassert.equal(queue.length, 2) \nqueue.enqueue(5);\nassert.equal(queue.front(), 2);\nassert.equal(queue.toString(), \n`2\n3\n5`);\nassert.equal(queue.back(), 5);\nassert.equal(queue.empty(), false);\ndone();",
               "err": {},
-              "uuid": "ff5de4c8-da01-492d-99b6-2e71f3c0d8d3",
-              "parentUUID": "02c18048-45b3-4f1a-a9f0-aba18acc4957",
+              "uuid": "bfb20d9a-69b7-4b1f-80e6-171606d26331",
+              "parentUUID": "57b635dc-10ae-48e6-a925-071ec1dd11e5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ff5de4c8-da01-492d-99b6-2e71f3c0d8d3"
+            "bfb20d9a-69b7-4b1f-80e6-171606d26331"
           ],
           "failures": [],
           "pending": [],
@@ -239,7 +258,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "f598b59d-8e40-4cdb-9dea-f6cca607ce0e",
+          "uuid": "238e2ab3-8b37-4e51-96db-d8d0ef552647",
           "title": "链表基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\listNode.spec.js",
           "file": "\\tests\\util\\listNode.spec.js",
@@ -257,17 +276,17 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const listNode = new ListNode(1);\nlet node2 = listNode.insert(2, 1);\nlet node3 = listNode.insert(3, 2);\nlet node4 = listNode.insert(4, 3);\nassert.equal(listNode.display(), '1 => 2 => 3 => 4');\nassert.equal(listNode.find(3), node3);\nassert.equal(listNode.findPrevious(2), listNode.head);\nlet node2_5 = listNode.insert(2.5, 2);\nassert.equal(listNode.display(), '1 => 2 => 2.5 => 3 => 4');\nlistNode.remove(3);\nassert.equal(listNode.display(), '1 => 2 => 2.5 => 4');\ndone();",
+              "code": "const listNode = new ListNode(1);\nlet node2 = listNode.insert(2, 1);\nlet node3 = listNode.insert(3, 2);\nlet node4 = listNode.insert(4, 3);\nassert.equal(listNode.display(), '1 => 2 => 3 => 4');\nassert.equal(listNode.find(3), node3);\nassert.equal(listNode.find(5), false);\nassert.equal(listNode.findPrevious(2), listNode.head);\nassert.equal(listNode.findPrevious(5), false);\nlet node2_5 = listNode.insert(2.5, 2);\nlet node6 = listNode.insert(6, 5);\nassert.equal(listNode.display(), '1 => 2 => 2.5 => 3 => 4');\nlistNode.remove(3);\nassert.equal(listNode.display(), '1 => 2 => 2.5 => 4');\ndone();",
               "err": {},
-              "uuid": "f9ff8685-7fc4-4d5a-94e2-6924c8f8d2ad",
-              "parentUUID": "f598b59d-8e40-4cdb-9dea-f6cca607ce0e",
+              "uuid": "695fc892-f2e0-41da-9cfd-4a952c6419a4",
+              "parentUUID": "238e2ab3-8b37-4e51-96db-d8d0ef552647",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f9ff8685-7fc4-4d5a-94e2-6924c8f8d2ad"
+            "695fc892-f2e0-41da-9cfd-4a952c6419a4"
           ],
           "failures": [],
           "pending": [],
@@ -278,7 +297,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "f81c3885-712d-46ff-88bd-974c8d5d9b76",
+          "uuid": "81718de3-3189-4368-a188-d5b2475dd537",
           "title": "双向链表基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\doubleListNode.spec.js",
           "file": "\\tests\\util\\doubleListNode.spec.js",
@@ -296,17 +315,17 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const listNode = new ListNode(1);\nlet node2 = listNode.insert(2, 1);\nlet node3 = listNode.insert(3, 2);\nlet node4 = listNode.insert(4, 3);\nassert.equal(listNode.display(), '1 <=> 2 <=> 3 <=> 4');\nassert.equal(listNode.find(3), node3);\nassert.equal(listNode.findPrevious(2), listNode.head);\nlet node2_5 = listNode.insert(2.5, 2);\nassert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 3 <=> 4');\nlistNode.remove(3);\nassert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 4');\nassert.equal(listNode.findNext(2), node2_5);\ndone();",
+              "code": "const listNode = new ListNode(1);\nlet node2 = listNode.insert(2, 1);\nlet node3 = listNode.insert(3, 2);\nlet node4 = listNode.insert(4, 3);\nlet node6 = listNode.insert(6, 5);\nassert.equal(listNode.display(), '1 <=> 2 <=> 3 <=> 4');\nassert.equal(listNode.find(3), node3);\nassert.equal(listNode.find(5), false);\nassert.equal(listNode.findPrevious(2), listNode.head);\nassert.equal(listNode.findPrevious(5), false);\nlet node2_5 = listNode.insert(2.5, 2);\nassert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 3 <=> 4');\nlistNode.remove(3);\nassert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 4');\nassert.equal(listNode.findNext(2), node2_5);\nassert.equal(listNode.findNext(4), null);\nassert.equal(listNode.findNext(5), false);\ndone();",
               "err": {},
-              "uuid": "906c0746-0301-4bb0-a66f-9c2404193559",
-              "parentUUID": "f81c3885-712d-46ff-88bd-974c8d5d9b76",
+              "uuid": "7d83c559-4fb2-4331-bb8f-465337e676b2",
+              "parentUUID": "81718de3-3189-4368-a188-d5b2475dd537",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "906c0746-0301-4bb0-a66f-9c2404193559"
+            "7d83c559-4fb2-4331-bb8f-465337e676b2"
           ],
           "failures": [],
           "pending": [],
@@ -317,7 +336,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "4ae129d3-cb12-402e-a828-7c25d948e621",
+          "uuid": "056cbeea-f651-429f-9bb8-8c957ed2bd0a",
           "title": "集合基本功能测试",
           "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\set.spec.js",
           "file": "\\tests\\util\\set.spec.js",
@@ -337,15 +356,93 @@
               "context": null,
               "code": "const set1 = new Gather([1, 2, 3, 4, 4]);\nconst set2 = new Gather([2, 4, 6, 7]);\nassert.equal(set1.display(), '1,2,3,4');\nlet intersect = Gather.intersect(set1, set2);\nassert.equal(intersect.display(), '2,4');\nlet union = Gather.union(set1, set2);\nassert.equal(union.display(), '1,2,3,4,6,7');\nlet complementary = Gather.complementary(set1, new Gather([1, 2, 3, 4, 5, 6]));\nassert.equal(complementary.display(), '5,6');\nlet difference = Gather.difference(set1, set2);\nassert.equal(difference.display(), '1,3,6,7');\ndone();",
               "err": {},
-              "uuid": "c234601a-a014-4910-bb74-6dc94305e4d6",
-              "parentUUID": "4ae129d3-cb12-402e-a828-7c25d948e621",
+              "uuid": "18e53fa0-9793-4eaa-8cc4-a9978118aac6",
+              "parentUUID": "056cbeea-f651-429f-9bb8-8c957ed2bd0a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c234601a-a014-4910-bb74-6dc94305e4d6"
+            "18e53fa0-9793-4eaa-8cc4-a9978118aac6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2776fae7-1c94-4f21-ad75-75cff13e8703",
+          "title": "二叉树基本功能测试",
+          "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\BST.spec.js",
+          "file": "\\tests\\util\\BST.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "基本功能测试",
+              "fullTitle": "二叉树基本功能测试 基本功能测试",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const bst = new BST(50);\nconst node_25 = bst.insert(25);\nbst.insert(15);\nbst.insert(30);\nbst.insert(30);\nbst.insert(35);\nbst.insert(32);\nbst.insert(34);\nconst node_55 = bst.insert(55);\nbst.insert(53);\nbst.insert(54);\nbst.insert(75);\nbst.insert(67);\nbst.insert(70);\nassert.equal(bst.inOrder(), '15,25,30,32,34,35,50,53,54,55,67,70,75');\nassert.equal(bst.find(50), bst.root);\nassert.equal(bst.find(25), node_25);\nassert.equal(bst.find(55), node_55);\nassert.equal(bst.find(72), false);\nassert.equal(bst.getMin().show(), 15);\nassert.equal(bst.getMax().show(), 75);\nbst.remove(15);\nassert.equal(bst.inOrder(), '25,30,32,34,35,50,53,54,55,67,70,75');\nbst.remove(30);\nassert.equal(bst.inOrder(), '25,32,34,35,50,53,54,55,67,70,75');\nassert.equal(bst.remove(58), false);\nbst.remove(55);\nassert.equal(bst.inOrder(), '25,32,34,35,50,53,54,67,70,75');\nbst.remove(35);\nassert.equal(bst.inOrder(), '25,32,34,50,53,54,67,70,75');\nbst.remove(50);\nassert.equal(bst.inOrder(), '25,32,34,53,54,67,70,75');\ndone();",
+              "err": {},
+              "uuid": "bf6597a5-f12a-481b-9ff2-a97db53e4123",
+              "parentUUID": "2776fae7-1c94-4f21-ad75-75cff13e8703",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bf6597a5-f12a-481b-9ff2-a97db53e4123"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "cd6cb625-054e-46a2-acef-a39e50474495",
+          "title": "图基本功能测试",
+          "fullFile": "D:\\html\\git\\Data_Structure\\tests\\util\\graph.spec.js",
+          "file": "\\tests\\util\\graph.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "基本功能测试",
+              "fullTitle": "图基本功能测试 基本功能测试",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const graph = new Graph(7);\ngraph.addEdge(0, 1);\ngraph.addEdge(0, 2);\ngraph.addEdge(0, 3);\ngraph.addEdge(1, 4);\ngraph.addEdge(2, 5);\ngraph.addEdge(4, 6);\nlet edgs = [\n\t[1, 2, 3],\n\t[0, 4],\n\t[0, 5],\n\t[0],\n\t[1, 6],\n\t[2],\n\t[4]\n]\nconsole.log(edgs.map((arr, i) => `${i} => ${arr.join(',')}`).join('\\n'));\nassert.equal(graph.showGraph(), edgs.map((arr, i) => `${i} => ${arr.join(',')}`).join('\\n'));\nassert.equal(graph.dfs(0), '0,1,4,6,2,5,3');\t\t\nassert.equal(graph.bfs(0), '0,1,2,3,4,5,6');\ndone();",
+              "err": {},
+              "uuid": "83b84f32-5cf0-45f9-be76-901605211cc7",
+              "parentUUID": "cd6cb625-054e-46a2-acef-a39e50474495",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83b84f32-5cf0-45f9-be76-901605211cc7"
           ],
           "failures": [],
           "pending": [],
@@ -368,7 +465,7 @@
   ],
   "meta": {
     "mocha": {
-      "version": "6.1.4"
+      "version": "6.2.0"
     },
     "mochawesome": {
       "options": {

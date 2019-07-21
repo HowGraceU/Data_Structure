@@ -3,12 +3,13 @@
   "header": {
     "event": "Allocation failed - JavaScript heap out of memory",
     "trigger": "FatalError",
-    "filename": "report.20190718.213148.14000.0.001.json",
-    "dumpEventTime": "2019-07-18T21:31:48Z",
-    "processId": 14000,
+    "filename": "report.20190721.113444.7852.0.001.json",
+    "dumpEventTime": "2019-07-21T11:34:44Z",
+    "processId": 7852,
     "cwd": "D:\\html\\git\\Data_Structure",
     "commandLine": [
       "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\html\\git\\Data_Structure\\node_modules\\.bin\\\\..\\mocha\\bin\\mocha",
       "mochaRunner.js"
     ],
     "nodejsVersion": "v11.14.0",
@@ -53,67 +54,67 @@
   },
   "nativeStack": [
     {
-      "pc": "0x00007ff6f641d24e",
+      "pc": "0x00007ff677e7d24e",
       "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+16366"
     },
     {
-      "pc": "0x00007ff6f641c0f9",
+      "pc": "0x00007ff677e7c0f9",
       "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+11929"
     },
     {
-      "pc": "0x00007ff6f641b923",
+      "pc": "0x00007ff677e7b923",
       "symbol": "std::basic_ios<char,std::char_traits<char> >::fill+9923"
     },
     {
-      "pc": "0x00007ff6f650c1d2",
+      "pc": "0x00007ff677f6c1d2",
       "symbol": "uv_loop_fork+89362"
     },
     {
-      "pc": "0x00007ff6f693454e",
+      "pc": "0x00007ff67839454e",
       "symbol": "v8::internal::FatalProcessOutOfMemory+798"
     },
     {
-      "pc": "0x00007ff6f6934487",
+      "pc": "0x00007ff678394487",
       "symbol": "v8::internal::FatalProcessOutOfMemory+599"
     },
     {
-      "pc": "0x00007ff6f69e7f64",
+      "pc": "0x00007ff678447f64",
       "symbol": "v8::internal::Heap::RootIsImmortalImmovable+14068"
     },
     {
-      "pc": "0x00007ff6f69e5ffb",
+      "pc": "0x00007ff678445ffb",
       "symbol": "v8::internal::Heap::RootIsImmortalImmovable+6027"
     },
     {
-      "pc": "0x00007ff6f6b1dc6d",
+      "pc": "0x00007ff67857dc6d",
       "symbol": "v8::internal::Factory::AllocateRawArray+61"
     },
     {
-      "pc": "0x00007ff6f6b1e602",
+      "pc": "0x00007ff67857e602",
       "symbol": "v8::internal::Factory::NewFixedArrayWithFiller+66"
     },
     {
-      "pc": "0x00007ff6f6b618da",
-      "symbol": "v8::internal::wasm::AsmType::Void+71658"
+      "pc": "0x00007ff6785c0eaa",
+      "symbol": "v8::internal::wasm::AsmType::Void+69050"
     },
     {
-      "pc": "0x00007ff6f6b4f163",
-      "symbol": "v8::internal::BigIntLiteral+133555"
+      "pc": "0x00007ff6785ad7f6",
+      "symbol": "v8::internal::BigIntLiteral+127046"
     },
     {
-      "pc": "0x00007ff6f6be0da0",
+      "pc": "0x00007ff678640da0",
       "symbol": "v8::internal::StoreBuffer::StoreBufferOverflow+64256"
     },
     {
-      "pc": "0x000003c6b7dd0481",
+      "pc": "0x0000014a8e0d0481",
       "symbol": ""
     }
   ],
   "javascriptHeap": {
-    "totalMemory": 614481920,
-    "totalCommittedMemory": 614481920,
-    "usedMemory": 608882072,
-    "availableMemory": 915223888,
+    "totalMemory": 1017180160,
+    "totalCommittedMemory": 1017180160,
+    "usedMemory": 1011701448,
+    "availableMemory": 512395288,
     "memoryLimit": 1526909922,
     "heapSpaces": {
       "read_only_space": {
@@ -131,32 +132,32 @@
         "available": 1031168
       },
       "old_space": {
-        "memorySize": 7540736,
-        "committedMemory": 7540736,
-        "capacity": 7332864,
-        "used": 5858240,
-        "available": 1474624
+        "memorySize": 9113600,
+        "committedMemory": 9113600,
+        "capacity": 8837440,
+        "used": 7472696,
+        "available": 1364744
       },
       "code_space": {
         "memorySize": 1048576,
         "committedMemory": 1048576,
-        "capacity": 630240,
-        "used": 630240,
+        "capacity": 693760,
+        "used": 693760,
         "available": 0
       },
       "map_space": {
         "memorySize": 1060864,
         "committedMemory": 1060864,
-        "capacity": 437120,
-        "used": 437120,
+        "capacity": 462720,
+        "used": 462720,
         "available": 0
       },
       "large_object_space": {
-        "memorySize": 603258880,
-        "committedMemory": 603258880,
-        "capacity": 1514158984,
-        "used": 601922952,
-        "available": 912236032
+        "memorySize": 1004384256,
+        "committedMemory": 1004384256,
+        "capacity": 1512556064,
+        "used": 1003038752,
+        "available": 509517312
       },
       "new_large_object_space": {
         "memorySize": 0,
@@ -168,16 +169,16 @@
     }
   },
   "resourceUsage": {
-    "userCpuSeconds": 1.578,
-    "kernelCpuSeconds": 0.765,
-    "cpuConsumptionPercent": 117.15,
-    "maxRss": 1484234752,
+    "userCpuSeconds": 4.203,
+    "kernelCpuSeconds": 1.296,
+    "cpuConsumptionPercent": 137.475,
+    "maxRss": 1435082752,
     "pageFaults": {
-      "IORequired": 460259,
+      "IORequired": 756993,
       "IONotRequired": 0
     },
     "fsActivity": {
-      "reads": 267,
+      "reads": 543,
       "writes": 6
     }
   },
@@ -189,6 +190,7 @@
     "ALLUSERSPROFILE": "C:\\ProgramData",
     "APPDATA": "C:\\Users\\Jqx\\AppData\\Roaming",
     "asl.log=Destination": "file",
+    "BABEL_DISABLE_CACHE": "1",
     "CommonProgramFiles": "C:\\Program Files\\Common Files",
     "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
     "CommonProgramW6432": "C:\\Program Files\\Common Files",
@@ -219,16 +221,19 @@
     "npm_config_version_git_sign": "",
     "npm_config_version_git_tag": "true",
     "npm_config_version_tag_prefix": "v",
+    "npm_config_wrap_output": "",
     "npm_execpath": "C:\\Program Files (x86)\\Yarn\\bin\\yarn.js",
-    "npm_lifecycle_event": "util",
-    "npm_lifecycle_script": "node mochaRunner.js",
+    "npm_lifecycle_event": "test",
+    "npm_lifecycle_script": "mocha mochaRunner.js",
     "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_author_email": "272670445@qq.com",
+    "npm_package_author_name": "howgraceu",
     "npm_package_bugs_url": "https://github.com/HowGraceU/Data_Structure/issues",
     "npm_package_description": "",
     "npm_package_devDependencies_jasmine_core": "^3.4.0",
     "npm_package_devDependencies_karma": "^4.2.0",
     "npm_package_devDependencies_karma_jasmine": "^2.0.1",
-    "npm_package_devDependencies_mocha": "^6.1.4",
+    "npm_package_devDependencies_mocha": "^6.2.0",
     "npm_package_devDependencies_mochawesome": "^4.0.1",
     "npm_package_homepage": "https://github.com/HowGraceU/Data_Structure#readme",
     "npm_package_license": "ISC",
@@ -237,14 +242,14 @@
     "npm_package_readmeFilename": "README.md",
     "npm_package_repository_type": "git",
     "npm_package_repository_url": "git+https://github.com/HowGraceU/Data_Structure.git",
-    "npm_package_scripts_test": "echo \"Error: no test specified\" && exit 1",
-    "npm_package_scripts_util": "node mochaRunner.js",
+    "npm_package_scripts_test": "mocha mochaRunner.js",
+    "npm_package_scripts_util=nyc --reporter=html --report-dir": "docs\\coverage yarn test",
     "npm_package_version": "1.0.0",
     "NUMBER_OF_PROCESSORS": "8",
     "OneDrive": "C:\\Users\\Jqx\\OneDrive",
     "OS": "Windows_NT",
-    "Path": "C:\\Users\\Jqx\\AppData\\Local\\Temp\\yarn--1563456706619-0.09062777299327585;D:\\html\\git\\Data_Structure\\node_modules\\.bin;C:\\Users\\Jqx\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;D:\\xampp\\php;C:\\composer;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Ruby24-x64\\bin;C:\\Users\\Jqx\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Users\\Jqx\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Jqx\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Jqx\\AppData\\Roaming\\npm;C:\\Users\\Jqx\\AppData\\Local\\Yarn\\bin",
-    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW;.CPL",
+    "Path": "C:\\Users\\Jqx\\AppData\\Local\\Temp\\yarn--1563680080610-0.2841317983210887;D:\\html\\git\\Data_Structure\\node_modules\\.bin;C:\\Users\\Jqx\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Users\\Jqx\\.node-spawn-wrap-7356-a91655d65bf8;C:\\Users\\Jqx\\AppData\\Local\\Temp\\yarn--1563680079820-0.5569912606089713;D:\\html\\git\\Data_Structure\\node_modules\\.bin;C:\\Users\\Jqx\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;D:\\xampp\\php;C:\\composer;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Ruby24-x64\\bin;C:\\Users\\Jqx\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Users\\Jqx\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Jqx\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Jqx\\AppData\\Roaming\\npm;C:\\Users\\Jqx\\AppData\\Local\\Yarn\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.RB;.RBW;.CPL",
     "PROCESSOR_ARCHITECTURE": "AMD64",
     "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
     "PROCESSOR_LEVEL": "6",
@@ -258,6 +263,7 @@
     "PUBLIC": "C:\\Users\\Public",
     "RUBYOPT": "-Eutf-8",
     "SESSIONNAME": "Console",
+    "SPAWN_WRAP_SHIM_ROOT": "C:\\Users\\Jqx/.node-spawn-wrap-",
     "SSLKEYLOGFILE": "C:\\ssl_key\\ssl_key.log",
     "SystemDrive": "C:",
     "SystemRoot": "C:\\WINDOWS",
@@ -285,8 +291,8 @@
     "C:\\WINDOWS\\System32\\sechost.dll",
     "C:\\WINDOWS\\System32\\USER32.dll",
     "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
-    "C:\\WINDOWS\\System32\\win32u.dll",
     "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
     "C:\\WINDOWS\\System32\\GDI32.dll",
     "C:\\WINDOWS\\System32\\gdi32full.dll",
     "C:\\WINDOWS\\System32\\msvcp_win.dll",

@@ -12,11 +12,14 @@ describe('双向链表基本功能测试', function () {
 		let node2 = listNode.insert(2, 1);
 		let node3 = listNode.insert(3, 2);
 		let node4 = listNode.insert(4, 3);
+		let node6 = listNode.insert(6, 5);
 
 		assert.equal(listNode.display(), '1 <=> 2 <=> 3 <=> 4');
 
 		assert.equal(listNode.find(3), node3);
+		assert.equal(listNode.find(5), false);
 		assert.equal(listNode.findPrevious(2), listNode.head);
+		assert.equal(listNode.findPrevious(5), false);
 
 		let node2_5 = listNode.insert(2.5, 2);
 		assert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 3 <=> 4');
@@ -25,6 +28,8 @@ describe('双向链表基本功能测试', function () {
 		assert.equal(listNode.display(), '1 <=> 2 <=> 2.5 <=> 4');
 
 		assert.equal(listNode.findNext(2), node2_5);
+		assert.equal(listNode.findNext(4), null);
+		assert.equal(listNode.findNext(5), false);
 
 		done();
 	});

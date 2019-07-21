@@ -73,12 +73,12 @@ module.exports = class List {
 	}
 
 	// 返回列表个数
-	length() {
+	get length() {
 		return this.size;
 	}
 
 	// 返回列表当前位置
-	currPos() {
+	get currPos() {
 		return this.pos;
 	}
 
