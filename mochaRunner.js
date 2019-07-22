@@ -17,6 +17,7 @@ mocha.addFile(join('tests', 'util', 'doubleListNode.spec.js'));
 mocha.addFile(join('tests', 'util', 'set.spec.js'));
 mocha.addFile(join('tests', 'util', 'BST.spec.js'));
 mocha.addFile(join('tests', 'util', 'graph.spec.js'));
+mocha.addFile(join('tests', 'util', 'sort.spec.js'));
 mocha.run(() => {
     process.exit();
 })
