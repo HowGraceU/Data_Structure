@@ -5,12 +5,15 @@ module.exports = function () {
 	for (let i = 1; i < len; i++) {
 		let item = arr[i];
 
-		for (let j = i - 1; j >= 0; j--) {
+		let j = i - 1;
+		for (; j >= 0; j--) {
 			if (arr[j] > item) {
-				this.swap(j, j + 1);
+				arr[j + 1] = arr[j];
 			} else {
 				break;
 			}
 		}
+
+		arr[j + 1] = item;
 	}
 }
