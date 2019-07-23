@@ -12,7 +12,7 @@ describe('排序算法测试', function () {
 		assert.equal(arr.length, 100);
 
 		let allNum = arr.every(item => {
-			return typeof item === 'number' && 0 < item && item < 1000;
+			return typeof item === 'number' && 0 < item && item < 10000;
 		});
 		assert.equal(allNum, true);
 
@@ -187,6 +187,68 @@ describe('排序算法测试', function () {
 		let count = 100;
 		while (count--) {
 			new randomArr(1000).merge();
+		}
+
+		done();
+	});
+
+	it('快速排序基本功能测试', done => {
+		let count = 10;
+		while (count--) {
+			let arr = new randomArr(100);
+			let forkArr = Array.from(arr).sort((a, b) => a - b);
+
+			arr.quick();
+			assert.equal(arr.toString(), forkArr.toString());
+		}
+
+		done();
+	});
+
+	it('快速排序100个时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).quick();
+		}
+
+		done();
+	});
+
+	it('快速排序1000个时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).quick();
+		}
+
+		done();
+	});
+
+	it('堆排序基本功能测试', done => {
+		let count = 10;
+		while (count--) {
+			let arr = new randomArr(100);
+			let forkArr = Array.from(arr).sort((a, b) => a - b);
+
+			arr = arr.heap();
+			assert.equal(arr.toString(), forkArr.toString());
+		}
+
+		done();
+	});
+
+	it('堆排序100个时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).heap();
+		}
+
+		done();
+	});
+
+	it('堆排序1000个时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).heap();
 		}
 
 		done();

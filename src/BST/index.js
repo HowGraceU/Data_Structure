@@ -31,8 +31,7 @@ module.exports = class BST {
 		}
 	}
 
-	// 中序遍历
-	inOrder() {
+	heap() {
 		let current = this.root;
 		let order = [];
 		let res = [];
@@ -48,7 +47,11 @@ module.exports = class BST {
 			}
 		}
 
-		return res.toString();
+		return res;
+	}
+	// 中序遍历
+	inOrder() {
+		return this.heap.toString();
 	}
 
 	getMin(root = this.root) {

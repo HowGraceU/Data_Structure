@@ -3,6 +3,8 @@ const selection = require('./selection.js');
 const insertion = require('./insertion.js');
 const shell = require('./shell.js');
 const merge = require('./merge.js');
+const quick = require('./quick.js');
+const heap = require('./heap.js');
 
 class randomArr extends Array {
 	constructor(num) {
@@ -14,7 +16,7 @@ class randomArr extends Array {
 	}
 
 	randomNum() {
-		return parseInt(1000 * Math.random());
+		return parseInt(10000 * Math.random());
 	}
 
 	swap(i, j) {
@@ -30,5 +32,7 @@ randomArr.prototype.selection = selection;
 randomArr.prototype.insertion = insertion;
 randomArr.prototype.shell = shell;
 randomArr.prototype.merge = merge;
+randomArr.prototype.quick = quick;
+randomArr.prototype.heap = heap;
 
 module.exports = randomArr;
