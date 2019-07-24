@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = function inserting() {
 	const arr = this;
 	const len = arr.length;
 

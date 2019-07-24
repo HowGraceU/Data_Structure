@@ -19,24 +19,6 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('原生排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).sort((a, b) => a - b);
-		}
-
-		done();
-	});
-
-	it('原生排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).sort((a, b) => a - b);
-		}
-
-		done();
-	});
-
 	it('冒泡排序基本功能测试', done => {
 		let count = 10;
 		while (count--) {
@@ -45,24 +27,6 @@ describe('排序算法测试', function () {
 
 			arr.bubble();
 			assert.equal(arr.toString(), forkArr.toString());
-		}
-
-		done();
-	});
-
-	it('冒泡排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).bubble();
-		}
-
-		done();
-	});
-
-	it('冒泡排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).bubble();
 		}
 
 		done();
@@ -81,24 +45,6 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('选择排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).selection();
-		}
-
-		done();
-	});
-
-	it('选择排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).selection();
-		}
-
-		done();
-	});
-
 	it('插入排序基本功能测试', done => {
 		let count = 10;
 		while (count--) {
@@ -107,24 +53,6 @@ describe('排序算法测试', function () {
 
 			arr.insertion();
 			assert.equal(arr.toString(), forkArr.toString());
-		}
-
-		done();
-	});
-
-	it('插入排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).insertion();
-		}
-
-		done();
-	});
-
-	it('插入排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).insertion();
 		}
 
 		done();
@@ -143,24 +71,6 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('希尔排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).shell();
-		}
-
-		done();
-	});
-
-	it('希尔排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).shell();
-		}
-
-		done();
-	});
-
 	it('归并排序基本功能测试', done => {
 		let count = 10;
 		while (count--) {
@@ -169,24 +79,6 @@ describe('排序算法测试', function () {
 
 			arr.merge();
 			assert.equal(arr.toString(), forkArr.toString());
-		}
-
-		done();
-	});
-
-	it('归并排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).merge();
-		}
-
-		done();
-	});
-
-	it('归并排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).merge();
 		}
 
 		done();
@@ -205,24 +97,6 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('快速排序100个时间测试', done => {
-		let count = 10000;
-		while (count--) {
-			new randomArr(100).quick();
-		}
-
-		done();
-	});
-
-	it('快速排序1000个时间测试', done => {
-		let count = 1000;
-		while (count--) {
-			new randomArr(1000).quick();
-		}
-
-		done();
-	});
-
 	it('堆排序基本功能测试', done => {
 		let count = 10;
 		while (count--) {
@@ -236,7 +110,96 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('堆排序100个时间测试', done => {
+	it('计数排序基本功能测试', done => {
+		let count = 10;
+		while (count--) {
+			let arr = new randomArr(100);
+			let forkArr = Array.from(arr).sort((a, b) => a - b);
+
+			arr.counting();
+			assert.equal(arr.toString(), forkArr.toString());
+		}
+
+		done();
+	});
+
+	it('桶排序基本功能测试', done => {
+		let count = 10;
+		while (count--) {
+			let arr = new randomArr(100);
+			let forkArr = Array.from(arr).sort((a, b) => a - b);
+
+			arr.bucket();
+			assert.equal(arr.toString(), forkArr.toString());
+		}
+
+		done();
+	});
+
+	it('原生排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).sort((a, b) => a - b);
+		}
+
+		done();
+	});
+
+	it('冒泡排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).bubble();
+		}
+
+		done();
+	});
+
+	it('选择排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).selection();
+		}
+
+		done();
+	});
+
+	it('插入排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).insertion();
+		}
+
+		done();
+	});
+
+	it('希尔排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).shell();
+		}
+
+		done();
+	});
+
+	it('归并排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).merge();
+		}
+
+		done();
+	});
+
+	it('快速排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).quick();
+		}
+
+		done();
+	});
+
+	it('堆排序100个基数时间测试', done => {
 		let count = 10000;
 		while (count--) {
 			new randomArr(100).heap();
@@ -245,10 +208,118 @@ describe('排序算法测试', function () {
 		done();
 	});
 
-	it('堆排序1000个时间测试', done => {
+	it('计数排序10个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(10).counting();
+		}
+
+		done();
+	});
+
+	it('计数排序100个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(100).counting();
+		}
+
+		done();
+	});
+
+	it('桶排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).bucket();
+		}
+
+		done();
+	});
+
+	it('原生排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).sort((a, b) => a - b);
+		}
+
+		done();
+	});
+
+	it('冒泡排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).bubble();
+		}
+
+		done();
+	});
+
+	it('选择排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).selection();
+		}
+
+		done();
+	});
+
+	it('插入排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).insertion();
+		}
+
+		done();
+	});
+
+	it('希尔排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).shell();
+		}
+
+		done();
+	});
+
+	it('归并排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).merge();
+		}
+
+		done();
+	});
+
+	it('快速排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).quick();
+		}
+
+		done();
+	});
+
+	it('堆排序1000个基数时间测试', done => {
 		let count = 1000;
 		while (count--) {
 			new randomArr(1000).heap();
+		}
+
+		done();
+	});
+
+	it('计数排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).counting();
+		}
+
+		done();
+	});
+
+	it('桶排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).bucket();
 		}
 
 		done();
