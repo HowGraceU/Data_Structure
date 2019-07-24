@@ -136,6 +136,19 @@ describe('排序算法测试', function () {
 		done();
 	});
 
+	it('基数排序基本功能测试', done => {
+		let count = 10;
+		while (count--) {
+			let arr = new randomArr(100);
+			let forkArr = Array.from(arr).sort((a, b) => a - b);
+
+			arr.radix();
+			assert.equal(arr.toString(), forkArr.toString());
+		}
+
+		done();
+	});
+
 	it('原生排序100个基数时间测试', done => {
 		let count = 10000;
 		while (count--) {
@@ -235,6 +248,15 @@ describe('排序算法测试', function () {
 		done();
 	});
 
+	it('基数排序100个基数时间测试', done => {
+		let count = 10000;
+		while (count--) {
+			new randomArr(100).radix();
+		}
+
+		done();
+	});
+
 	it('原生排序1000个基数时间测试', done => {
 		let count = 1000;
 		while (count--) {
@@ -320,6 +342,15 @@ describe('排序算法测试', function () {
 		let count = 1000;
 		while (count--) {
 			new randomArr(1000).bucket();
+		}
+
+		done();
+	});
+
+	it('基数排序1000个基数时间测试', done => {
+		let count = 1000;
+		while (count--) {
+			new randomArr(1000).radix();
 		}
 
 		done();

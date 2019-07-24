@@ -7,6 +7,7 @@ const quick = require('./quick.js');
 const heap = require('./heap.js');
 const counting = require('./counting.js');
 const bucket = require('./bucket.js');
+const radix = require('./radix.js');
 
 class randomArr extends Array {
 	constructor(num) {
@@ -38,5 +39,6 @@ randomArr.prototype.quick = quick;
 randomArr.prototype.heap = heap;
 randomArr.prototype.counting = counting;
 randomArr.prototype.bucket = bucket;
+randomArr.prototype.radix = radix;
 
 module.exports = randomArr;
