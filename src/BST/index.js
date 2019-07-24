@@ -51,7 +51,7 @@ module.exports = class BST {
 	}
 	// 中序遍历
 	inOrder() {
-		return this.heap.toString();
+		return this.heap().toString();
 	}
 
 	getMin(root = this.root) {

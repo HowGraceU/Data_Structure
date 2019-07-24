@@ -167,7 +167,7 @@ describe('排序算法测试', function () {
 			let arr = new randomArr(100);
 			let forkArr = Array.from(arr).sort((a, b) => a - b);
 
-			arr = arr.merge();
+			arr.merge();
 			assert.equal(arr.toString(), forkArr.toString());
 		}
 
@@ -175,7 +175,7 @@ describe('排序算法测试', function () {
 	});
 
 	it('归并排序100个时间测试', done => {
-		let count = 1000;
+		let count = 10000;
 		while (count--) {
 			new randomArr(100).merge();
 		}
@@ -184,7 +184,7 @@ describe('排序算法测试', function () {
 	});
 
 	it('归并排序1000个时间测试', done => {
-		let count = 100;
+		let count = 1000;
 		while (count--) {
 			new randomArr(1000).merge();
 		}
@@ -229,7 +229,7 @@ describe('排序算法测试', function () {
 			let arr = new randomArr(100);
 			let forkArr = Array.from(arr).sort((a, b) => a - b);
 
-			arr = arr.heap();
+			arr.heap();
 			assert.equal(arr.toString(), forkArr.toString());
 		}
 
